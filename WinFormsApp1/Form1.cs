@@ -20,5 +20,15 @@ namespace WinFormsApp1
             newForm.Show();
             this.Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //dataGridView1.DataSource = DepartmentService.GetDepartments();
+        }
     }
 }

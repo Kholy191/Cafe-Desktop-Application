@@ -10,8 +10,6 @@ namespace DAL.Model
     {
         public int Id { get; set; }
         public int T_Price { get; set; }
-
         public HashSet<OrderProcuct> orderProcuct { get; set; } = new HashSet<OrderProcuct>();
-
     }
 }

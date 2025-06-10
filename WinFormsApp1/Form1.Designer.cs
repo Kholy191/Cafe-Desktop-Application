@@ -139,6 +139,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(294, 286);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Form1
             // 
@@ -156,6 +157,7 @@
             Controls.Add(dataGridView1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

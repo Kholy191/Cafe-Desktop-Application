@@ -14,14 +14,13 @@ namespace DAL.Data
     {
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Store> Stores { get; set; }
         public DbSet<OrderProcuct> OrderProcucts { get; set; }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=CafeteriaContext;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<OrderProcuct>()
@@ -34,8 +33,6 @@ namespace DAL.Data
                 .HasOne(op => op.Products)
                 .WithMany(p => p.OrderProcucts)
                 .HasForeignKey(op => op.Product_Id);
-            modelBuilder.Entity<Store>() 
-                .HasKey(s=> new { s.Product_Id , s.Expired_date });
         }
         
     }
