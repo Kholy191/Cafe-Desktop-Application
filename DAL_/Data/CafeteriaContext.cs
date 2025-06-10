@@ -18,7 +18,9 @@ namespace DAL.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=CafeteriaContext;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+    
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

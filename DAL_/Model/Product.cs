@@ -13,6 +13,6 @@ namespace DAL.Model
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
         public string Category { get; set; }
-        public HashSet<OrderProcuct> OrderProcucts { get; set; } = new HashSet<OrderProcuct>();
+        public virtual HashSet<OrderProcuct> OrderProcucts { get; set; } = new HashSet<OrderProcuct>();
     }
 }

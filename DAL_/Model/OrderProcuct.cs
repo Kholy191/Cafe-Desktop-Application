@@ -16,10 +16,10 @@ namespace DAL.Model
         public int Quantity { get; set; }
 
         [ForeignKey("Order_Id")]
-        public Order Orders { get; set; } = new Order();
+        public virtual Order Orders { get; set; } = new Order();
 
         [ForeignKey("Product_Id")]
-        public Product Products { get; set; } = new Product();
+        public virtual Product Products { get; set; } = new Product();
 
 
     }
